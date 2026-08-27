@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结尾标志符的使用 - RS232 Tool 帮助文档</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="app-header">
+        <a class="brand" href="../index.html">
+            <img src="../images/IconPort32.png" alt="">
+            <span>RS232 Tool 帮助文档</span>
+            <small>· 9.0 版</small>
+        </a>
+        <div class="header-tools">
+            <input type="search" class="search-box" placeholder="搜索文档...">
+            <a class="header-link" href="../index.html">返回首页</a>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="nav-list">
+                <li><a href="../index.html" data-page="intro">软件简介</a></li>
+                <li><a href="interface.html" data-page="interface">软件界面</a></li>
+                <li><a href="setup.html" data-page="setup">运行与卸载</a></li>
+                <li><a href="command-table.html" data-page="command-table">通讯命令表操作</a></li>
+                <li><a href="group-send.html" data-page="group-send">命令组的发送</a></li>
+                <li><a href="font-color.html" data-page="font-color">接收区的字体字号和颜色</a></li>
+                <li><a href="end-mark.html" data-page="end-mark">结尾标志符的使用</a></li>
+                <li><a href="checksum.html" data-page="checksum">计算通讯命令校验码</a></li>
+                <li><a href="save-data.html" data-page="save-data">保存通讯数据</a></li>
+                <li><a href="simulation.html" data-page="simulation">仪表模拟</a></li>
+                <li><a href="scan.html" data-page="scan">扫描仪表通讯协议</a></li>
+                <li><a href="floating.html" data-page="floating">浮窗</a></li>
+                <li><a href="import-export.html" data-page="import-export">导入与导出数据</a></li>
+                <li><a href="plc-password.html" data-page="plc-password">查看 PLC 口令</a></li>
+                <li><a href="settings.html" data-page="settings">设置</a></li>
+                <li><a href="register.html" data-page="register">服务支持与注册升级</a></li>
+                <li><a href="faq.html" data-page="faq">常见问题释疑</a></li>
+                <li><a href="rs232-pinout.html" data-page="rs232-pinout">附录：RS232 端子定义与连线</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <div class="layout">
+            <section class="content">
+                <nav class="breadcrumb"><a href="../index.html">首页</a> <span class="separator">/</span> <span>结尾标志符的使用</span></nav>
+
+                <h1 class="page-title">结尾标志符的使用</h1>
+
+                <div class="topic-body">
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman"><font style="FONT-SIZE: 11pt"> 在主界面中点击<span style="FONT-SIZE: 11pt" >【</span>结尾标志符<span style="FONT-SIZE: 11pt" >】</span>，将弹出下面的“结尾标志符”窗口。</font></font></p>
+<p><font face="Times New Roman"><font style="FONT-SIZE: 11pt"><b> <font color="#000080">结尾标志符：</font></b>一般在智能仪表或 PLC 的通讯命令格式中，均用一个固定的标志字符串，如“回车符＋换行符”等作为其指令的结束标志，这个标志字符串称为“结尾标志符”。</font><span style="FONT-SIZE: 11pt"><span class="auto-style4"><b>RS232 
+Tool </b>可用此标志符作为接收数据的自动换行标记，</span><b>RS232 Tool</b> </span>
+<font style="FONT-SIZE: 11pt">默认的结尾标志符是“回车符＋换行符”。</font></font></p>
+<p><font face="Times New Roman">
+<font style="FONT-SIZE: 11pt">窗口中表格的每一行显示已保存的一种结尾标志符记录，可以直接进行修改、输入或粘贴等操作，在表格中点击鼠标右键可弹出快捷菜单操作。</font></font></p>    
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman"> 由于结尾标志符一般都是由特殊 ASCII 码字符所组成，不便于直接显示，因而标字符在此采用十六进制进行编辑、显示。</font></p>
+				<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >　</p>     
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman"> 有些智能仪表通讯命令的结尾标志符不是完全固定的，其中包含有变化的部分，其结构为“固定部分＋变化部分”。在设置时，我们可以用“*”号来代替变化的部分，变化的部分有多少个字符，对应的“*”号就应设有相同的个数。例如：“ABC**”，其固定3位，变化2位。</font></p>
+				<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >　</p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman"> 
+注意：结尾标志符格式中十六进制内容不能为空。</font></p>     
+  
+                <p><font face="Times New Roman"><span style="FONT-SIZE: 11pt; FONT-WEIGHT: 700" 
+                 >设置通讯指令</span><b><font style="FONT-SIZE: 11pt">结尾标志符</font></b><font style="FONT-SIZE: 11pt"><b>的一般步骤</b></font></font></p>         
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman"><font style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 
+1. 在表格“选择”栏中勾选相应的标志符，若没有所需则</font><span style="FONT-SIZE: 11pt">应先</span><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span><font style="FONT-SIZE: 11pt" >增加</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt">或</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span><font style="FONT-SIZE: 11pt" >插入</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt">新的结尾标志符；</font></font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+2. 若与需设置的不同，则可进行修改；</font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman"><font style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 3. 
+返回主界面</font><font style="FONT-SIZE: 11pt">。</font></font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font style="FONT-SIZE: 11pt">&nbsp;</p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 align=left>
+<img border=0 src="../images/EndMark.gif" width=648 height=430  loading="lazy"></FONT></p>
+                </div>
+
+                <nav class="page-nav">
+                    <a href="font-color.html"><span class="nav-label">← 上一篇</span><span class="nav-title">接收区的字体字号和颜色</span></a>
+                    <span class="nav-spacer"></span>
+                    <a href="checksum.html"><span class="nav-label">下一篇 →</span><span class="nav-title">计算通讯命令校验码</span></a>
+                </nav>
+            </section>
+
+            <aside class="toc-sidebar">
+                <div class="toc-title">本页目录</div>
+                <ul></ul>
+            </aside>
+        </div>
+    </main>
+
+    <button class="mobile-menu-btn" aria-label="导航菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+    </button>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

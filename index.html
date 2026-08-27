@@ -1,53 +1,164 @@
 <!DOCTYPE html>
+<!-- RS232 Tool 网站主页2.0版，Kimi AI辅助设计，ZYX软件设计室 2026.8 -->
 
 <html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>下载 RS232 Tool</title>
+	<title>下载 RS232 Tool</title>
     <link rel="icon" href="IconPort32.ico" type="image/x-icon"/>
-    <style>
-        body{max-width:1280px;margin:20px auto;padding:0 20px;font-family:system-ui, sans-serif; background: #f3f3f3;}
-        .item{border:1px solid #eee;padding:16px;margin:12px 0;border-radius:8px; background: #ffffff;}
-        a { color: #000000; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .btn { padding: 8px 16px; border-radius: 6px; border: 1px solid #30363d; background: transparent; color: #c9d1d9;}
-		.btn-primary { background: #0071e3; border-color: #0071e3; color: white; }
-        .btn-primary:hover { background: #0077ed; }
-	</style>
+  
+	<style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; color: #1a1a1a; line-height: 1.7; }
+
+        /* ===== 顶部蓝色横幅 ===== */
+        .hero { background: #0078D4; color: #fff; padding: 42px 24px 42px; }
+        .hero-inner { max-width: 1280px; margin: 0 auto; }
+        .hero h1 { font-size: 42px; font-weight: 700;  margin: 0 0 8px; letter-spacing: -0.5px; }
+        .hero-links { color: #fff; font-size: 15px; opacity: 0.8; margin: 0 0 20px; }
+        .hero-links a { color: #fff; text-decoration: none; }
+        .hero-links a:hover { color: #ffffff; text-decoration: underline; font-weight: 600; }
+        .hero-desc { font-size: 15px; margin: 0 0 16px; max-width: 1280px; line-height: 1.7; }
+
+        /* ===== 白色内容区 ===== */
+        .body { max-width: 1280px; margin: 0 auto; padding: 40px 24px 48px; }
+        .option { display: flex; gap: 40px; align-items: flex-start; margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid #e5e5e5; }
+        .option:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .option-text { flex: 1; min-width: 0; }
+        .option-text h2 { font-size: 28px; font-weight: 700; margin: 0 0 12px; }
+        .option-text p { font-size: 15px; color: #333; margin: 0 0 20px; line-height: 1.9; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; border-radius: 2px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; text-decoration: none; transition: background 0.15s; }
+        .btn-blue { background: #0078D4; color: #fff; }
+        .btn-blue:hover { background: #006CBE; }
+        .btn-outline { background: transparent; color: #1a1a1a; border: 1px solid #ccc; margin-right: 8px; }
+        .btn-outline:hover { background: #f5f5f5; }
+        .meta { font-size: 13px; color: #888; margin-top: 16px; }
+
+		.option-visual { width: 520px; min-width: 520px; height: 373px; border-radius: 8px; background: linear-gradient(135deg, #e8f4fd 0%, #d0e8f8 100%); display: flex; align-items: center; justify-content: center; font-size: 64px; border: 1px solid rgba(0,120,212,0.15); }
+        .option-visual img { border: none; max-width: 100%; height: auto; display: block; }
+
+		.friend-links h3 { font-size: 18px; font-weight: 700; margin: 0 0 16px; }
+        .friend-links a { text-decoration: none; }
+        .friend-links a:hover { text-decoration: underline; }
+
+        /* ===== 特色功能：点击切换图像 ===== */
+        .feature-list { display: flex; flex-direction: column; gap: 3px; margin-top: 8px; }
+        .feature-item { display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 6px; cursor: pointer; border: 1.5px solid transparent; background: transparent; font-size: 15px; font-weight: 500; color: #555; text-align: left; width: 100%; transition: all 0.2s ease; font-family: inherit; }
+        .feature-item:hover { background: rgba(0,120,212,0.06); color: #1a1a1a; }
+        .feature-item.active { background: rgba(0,120,212,0.1); border-color: rgba(0,120,212,0.25); color: #0078D4; font-weight: 600; }
+        .feature-dot { width: 8px; height: 8px; border-radius: 50%; background: #bbb; transition: background 0.2s; flex-shrink: 0; }
+        .feature-item.active .feature-dot { background: #0078D4; }
+
+        /* 右侧图像容器 */
+        .feature-viewer { width: 520px; min-width: 520px; height: 373px; border-radius: 8px; overflow: hidden; position: relative; background: linear-gradient(135deg, #e8f4fd 0%, #d0e8f8 100%); border: 1px solid rgba(0,120,212,0.15); display: flex; align-items: center; justify-content: center; }
+        .feature-viewer img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.35s ease; pointer-events: none; }
+        .feature-viewer img.show { opacity: 1; }
+
+        @media (max-width: 960px) { .feature-viewer { width: 100%; min-width: auto; height: 260px; } }
+
+        /* ===== 底部暗灰色横幅 ===== */
+        .footer-banner { background: #494949; color: #ccc; padding: 32px 24px; }
+        .footer-inner { max-width: 1024px; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; }
+        .footer-left { font-size: 15px; color: #bbbbbb; }
+        .footer-links a { color: #bbbbbb; text-decoration: none; font-size: 15px; margin-left: 20px; transition: color 0.2s; }
+        .footer-links a:hover { color: #fff; text-decoration: underline; }
+
+        @media (max-width: 960px) {
+        .hero h1 { font-size: 30px; }
+        .option { flex-direction: column; gap: 20px; }
+        .option-visual { width: 100%; min-width: auto; height: 160px; }
+        .footer-inner { flex-direction: column; text-align: center; }
+        .footer-links a { margin: 0 10px; }
+        }
+    </style>
+
+	<script>
+        function showFeature(index) {
+            // 左侧高亮
+            document.querySelectorAll('.feature-item').forEach((el, i) => { el.classList.toggle('active', i === index); });
+            // 右侧切换图像（淡入淡出）
+            document.querySelectorAll('.feature-img').forEach((el, i) => { el.classList.toggle('show', i === index); });
+        }
+    </script>
 </head>
 
 <body>
-	<h1 style="font-size:40px;"><img src="121x75.jpg" width="63" height="40" border="0" alt="">  RS232 Tool 串口通讯测试软件</h1>
-    <div class="item">
-        <p>RS232 Tool 是一款界面直观的串口通讯测试软件，支持RS232/RS485/RS422接口以及USB转串口等通讯。软件包含通讯命令表、数字标尺、仪表模拟及仪表通讯协议扫描等多项特色功能，开发人员拥有二十多年仪表设备、工控系统专业研发与测试经验，所设计的串口通讯测试功能契合实际应用场景。如果还在为记不住大量的各类仪表通讯命令而苦恼，在调试智能仪表和PLC的通讯工作时感到棘手，就请借助RS232 Tool吧！</p>
-        <p>RS232 Tool 是绿色软件，软件包解压后点击“RS232Tool.exe”即可运行，支持WinXP、Win7、Win10、Win11全系列Windows操作系统</p>
+    <!-- 顶部蓝色横幅 -->
+    <div class="hero">
+        <div class="hero-inner">
+            <h1>RS232 Tool 串口通讯测试软件</h1>
+            <p class="hero-links">支持RS232/RS485/RS422接口以及USB转串口等通讯
+			<span>　|　</span><a href="help/index.html" target="_blank" rel="noopener" >帮助文档</a></p>
+            <p class="hero-desc">RS232 Tool 包含通讯命令表、数字标尺、仪表模拟及通讯协议扫描等多项特色功能，开发人员拥有二十多年仪表设备、工控系统专业研发与现场测试经验，软件功能设计契合实际应用场景。如果还在为记不住大量的各类仪表通讯命令而苦恼，在调试智能仪表和PLC的通讯工作时感到棘手，就请借助 RS232 Tool 吧！</p>
+        </div>
     </div>
 
-	<div class="item">
-        <h2>RS232 Tool 9.0 版（发布：2026.07.31）<span>　　</span>
-        <a href="https://github.com/RS232Tool/home/releases/download/v9.0/RS232Tool9.0.zip" class="btn btn-primary" >下载</a><span>　</span>
-        <a href="https://pan.baidu.com/s/1slVgw5v" target="_blank" rel="noopener" class="btn btn-primary">百度网盘下载</a></h2><br>
-		<img src="软件界面截图1.png" width="806" height="578" border="0" alt="">
-    </div>
-		
-    <div class="item">
-		<h2>特色功能</h2>
-        <p><font size="5px" color="#ff9900">● </font>内置通讯命令表，支持无限量存储与管理各类通讯命令和协议
-        <br><font size="5px" color="#ff9900">● </font>首创数字标尺、浮窗功能，准确定位通讯字符串各字符位置
-        <br><font size="5px" color="#ff9900">● </font>仪表模拟通讯，助力轻松进行通讯测试与调试
-        <br><font size="5px" color="#ff9900">● </font>支持命令组发送，可一次性发送多条通讯命令
-        <br><font size="5px" color="#ff9900">● </font>可定义接收字串的字体字号、颜色并能按标志符自动换行
-        <br><font size="5px" color="#ff9900">● </font>实时统计接收与发送的通讯数据行数、字符数
-        <br><font size="5px" color="#ff9900">● </font>扫描仪表通讯协议
-        <br><font size="5px" color="#ff9900">● </font>提供部分PLC口令查看功能</p>
+    <!-- 白色内容区 -->
+    <div class="body">
+        <div class="option">
+            <div class="option-text">
+                <h2>RS232 Tool 9.0 版（发布：2026.7.31）</h2>
+                <p>⚡新增扫描仪表通讯协议模块、查看实时通讯数据模块
+                <br>⚡仪表模拟可按设定校验规则计算添加校验码，计算校验码模块添加其它工控常用校验规则
+                <br>⚡命令表添加重新编号功能
+                <br>⚡可设置黑色软件界面</p>
+                <a href="https://github.com/RS232Tool/home/releases/download/v9.0/RS232Tool9.0.zip" class="btn btn-blue">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                立即下载</a><span>　</span><br><br>
+                <a href="https://pan.baidu.com/s/1slVgw5v" target="_blank" rel="noopener" class="btn btn-blue">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                网盘下载</a>
+                <div class="meta">文件大小：5.2 MB　|　RS232 Tool 是绿色软件，软件包解压后点击“RS232Tool.exe”即可运行<br>支持WinXP、Win7、Win10、Win11全系列Windows操作系统</div>
+			</div>
+            <div class="option-visual">
+       		<img src="软件主界面.gif" width="510" height="366" alt="RS232 Tool 界面"></div>
+        </div>
+
+        <!-- 特色功能：点击切换图像 -->
+        <div class="option">
+            <div class="option-text">
+                <h2>特色功能</h2>
+                <div class="feature-list" id="featureList">
+                    <button class="feature-item active" onclick="showFeature(0)"><span class="feature-dot"></span>内置无限量的通讯命令表</button>
+                    <button class="feature-item" onclick="showFeature(1)"> <span class="feature-dot"></span>软件首创数字标尺与浮窗</button>
+                    <button class="feature-item" onclick="showFeature(2)"> <span class="feature-dot"></span>仪表模拟</button>
+                    <button class="feature-item" onclick="showFeature(3)"> <span class="feature-dot"></span>支持命令组发送</button>
+                    <button class="feature-item" onclick="showFeature(4)"> <span class="feature-dot"></span>自定义接收字串样式</button>
+                    <button class="feature-item" onclick="showFeature(5)"> <span class="feature-dot"></span>实时通讯数据分类统计</button>
+                    <button class="feature-item" onclick="showFeature(6)"> <span class="feature-dot"></span>扫描仪表通讯协议</button>
+                    <button class="feature-item" onclick="showFeature(7)"> <span class="feature-dot"></span>PLC口令查看</button>
+                </div>
+            </div>
+
+			<!-- 右侧图像区：8张图叠在一起，默认只显示第1张 -->
+            <div class="feature-viewer">
+                <img src="feature-0.gif" class="feature-img show" alt="通讯命令表" >
+                <img src="feature-1.gif" class="feature-img" alt="数字标尺">
+                <img src="feature-2.gif" class="feature-img" alt="仪表模拟">
+                <img src="feature-3.gif" class="feature-img" alt="命令组">
+                <img src="feature-4.gif" class="feature-img" alt="自定义字串样式">
+                <img src="feature-5.gif" class="feature-img" alt="通讯数据统计">
+                <img src="feature-6.gif" class="feature-img" alt="扫描通讯协议">
+                <img src="feature-7.gif" class="feature-img" alt="PLC口令查看">
+            </div>
+        </div>
+
+        <div class="friend-links" style="margin-top: 48px; padding: 28px; background: #f0f7fc; border-radius: 4px; border-left: 4px solid #0078D4;">
+            <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 16px;">友情链接</h3>
+            <a href="https://www.onlinedown.net/" target="_blank" rel="noopener" style="color:#414141; ">华军软件园</a><span>丨</span>
+        </div>
+	</div>
+
+    <!-- 底部暗灰色横幅 -->
+    <div class="footer-banner">
+        <div class="footer-inner">
+            <div class="footer-left">© 2026 ZYX软件工作室，e-mail：zyxtool@163.com</div>
+            <div class="footer-links"></div>
+        </div>
     </div>
 
-	<h3>友情链接</h3>
-    <a href="https://www.onlinedown.net/" target="_blank" style="color:#0071e3">华军软件园</a>丨<br><br>
-    <hr>
-	<p style="text-align:center;"><font size="" color="#8b949e">©2026 ZYX软件工作室，e-mail：zyxtool@163.com</font></p>  
 </body>
 
 </html>

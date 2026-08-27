@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扫描仪表通讯协议 - RS232 Tool 帮助文档</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="app-header">
+        <a class="brand" href="../index.html">
+            <img src="../images/IconPort32.png" alt="">
+            <span>RS232 Tool 帮助文档</span>
+            <small>· 9.0 版</small>
+        </a>
+        <div class="header-tools">
+            <input type="search" class="search-box" placeholder="搜索文档...">
+            <a class="header-link" href="../index.html">返回首页</a>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="nav-list">
+                <li><a href="../index.html" data-page="intro">软件简介</a></li>
+                <li><a href="interface.html" data-page="interface">软件界面</a></li>
+                <li><a href="setup.html" data-page="setup">运行与卸载</a></li>
+                <li><a href="command-table.html" data-page="command-table">通讯命令表操作</a></li>
+                <li><a href="group-send.html" data-page="group-send">命令组的发送</a></li>
+                <li><a href="font-color.html" data-page="font-color">接收区的字体字号和颜色</a></li>
+                <li><a href="end-mark.html" data-page="end-mark">结尾标志符的使用</a></li>
+                <li><a href="checksum.html" data-page="checksum">计算通讯命令校验码</a></li>
+                <li><a href="save-data.html" data-page="save-data">保存通讯数据</a></li>
+                <li><a href="simulation.html" data-page="simulation">仪表模拟</a></li>
+                <li><a href="scan.html" data-page="scan">扫描仪表通讯协议</a></li>
+                <li><a href="floating.html" data-page="floating">浮窗</a></li>
+                <li><a href="import-export.html" data-page="import-export">导入与导出数据</a></li>
+                <li><a href="plc-password.html" data-page="plc-password">查看 PLC 口令</a></li>
+                <li><a href="settings.html" data-page="settings">设置</a></li>
+                <li><a href="register.html" data-page="register">服务支持与注册升级</a></li>
+                <li><a href="faq.html" data-page="faq">常见问题释疑</a></li>
+                <li><a href="rs232-pinout.html" data-page="rs232-pinout">附录：RS232 端子定义与连线</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <div class="layout">
+            <section class="content">
+                <nav class="breadcrumb"><a href="../index.html">首页</a> <span class="separator">/</span> <span>扫描仪表通讯协议</span></nav>
+
+                <h1 class="page-title">扫描仪表通讯协议</h1>
+
+                <div class="topic-body">
+<font style="FONT-SIZE: 11pt" face="Times New Roman"> <span style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<P><FONT face="Times New Roman"><FONT style="FONT-SIZE: 11pt">如果不知道仪表所用的串口通讯协议，可以通过“扫描仪表通讯协议”模块，进行扫描、分析，得到仪表实际所用的通讯协议。</FONT></FONT></P>
+
+<p>点击主界面菜单中或工具栏上的“扫描仪表通讯协议”图标，将打开下图所示窗口</span><span style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">。</span></font></P>
+<p><font face="Times New Roman">
+<font style="FONT-SIZE: 11pt">窗口中的编辑框是用于监控通讯数据，其每一行表示扫描所用到的通讯协议和从串口接收的数据，中间用“<b>|</b>”符号分隔开，右边是接收到的数据。</font></font></p>  
+<p><font face="Times New Roman"><span style="FONT-SIZE: 11pt; FONT-WEIGHT: 700">扫描仪表通讯协议</span><font style="FONT-SIZE: 11pt"><b>的一般步骤</b></font></font></p>         
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+1. 选择连接到仪表的对应串口，如“COM2”；</font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 2.
+选择“波特率范围”，此范围要尽可能涵盖仪表所用的波特率，常用“9600”；</font></p>
+<font style="FONT-SIZE: 11pt" face="Times New Roman"> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 3. 
+选择“通讯模式”，模式有“仪表自发数据”、“软件发送测试命令”两种，如果所用仪表有自动发送数据功能，可选择“仪表自发数据”并设置相应的间隔时间，否则选择“软件发送测试命令”，再依据所用仪表的通讯命令格式设置合适的测试命令；</font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&nbsp;&nbsp;&nbsp; 4. 点击<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【开始检测】，进入逐个从低到高的通讯协议扫描，观察监控区中显示的通讯情况；</span> 
+ </font></P>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><font face="Times New Roman"><font style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 
+5. 分析扫描通讯信息，得出仪表所用的通讯协议</font></font><font style="FONT-SIZE: 11pt" face="Times New Roman"> 
+ 。</font></p>
+				<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">　</p>
+				<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><font size="2">
+					<img  border=0 alt="" src="../images/Baud.gif"  loading="lazy"></font></p>
+<p><FONT size=3><font style="FONT-SIZE: 11pt" face="Times New Roman"><span 
+style="FONT-SIZE: 11pt">实例一：以“仪表自发数据”模式扫描</span>， 
+分析其扫描信息，可知符合的通讯协议是“9600,n,8,1”<font style="FONT-SIZE: 11pt" face="Times New Roman">。</font></p></FONT>
+<P class=auto-style3 style="TEXT-ALIGN: left"><font size=2><img border=0 alt="" src="../images/Baud1.gif" width=682 height=489  loading="lazy"></font></P>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"></p>
+<p><font face="Times New Roman"><font style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312"><span style="FONT-SIZE: 11pt">实例二：以“软件发送测试命令”模式扫描， 
+分析其扫描信息，可知符合的通讯协议是“9600,e,7.1”</span></span></span><font style="FONT-SIZE: 11pt" face="Times New Roman">。</font></p></FONT></FONT></FONT>
+<P class=auto-style3 style="TEXT-ALIGN: left"><font size=2><img border=0 alt="" src="../images/Baud2.gif" width=682 height=436  loading="lazy"></font></P>
+                </div>
+
+                <nav class="page-nav">
+                    <a href="simulation.html"><span class="nav-label">← 上一篇</span><span class="nav-title">仪表模拟</span></a>
+                    <span class="nav-spacer"></span>
+                    <a href="floating.html"><span class="nav-label">下一篇 →</span><span class="nav-title">浮窗</span></a>
+                </nav>
+            </section>
+
+            <aside class="toc-sidebar">
+                <div class="toc-title">本页目录</div>
+                <ul></ul>
+            </aside>
+        </div>
+    </main>
+
+    <button class="mobile-menu-btn" aria-label="导航菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+    </button>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

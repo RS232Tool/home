@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮窗 - RS232 Tool 帮助文档</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="app-header">
+        <a class="brand" href="../index.html">
+            <img src="../images/IconPort32.png" alt="">
+            <span>RS232 Tool 帮助文档</span>
+            <small>· 9.0 版</small>
+        </a>
+        <div class="header-tools">
+            <input type="search" class="search-box" placeholder="搜索文档...">
+            <a class="header-link" href="../index.html">返回首页</a>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="nav-list">
+                <li><a href="../index.html" data-page="intro">软件简介</a></li>
+                <li><a href="interface.html" data-page="interface">软件界面</a></li>
+                <li><a href="setup.html" data-page="setup">运行与卸载</a></li>
+                <li><a href="command-table.html" data-page="command-table">通讯命令表操作</a></li>
+                <li><a href="group-send.html" data-page="group-send">命令组的发送</a></li>
+                <li><a href="font-color.html" data-page="font-color">接收区的字体字号和颜色</a></li>
+                <li><a href="end-mark.html" data-page="end-mark">结尾标志符的使用</a></li>
+                <li><a href="checksum.html" data-page="checksum">计算通讯命令校验码</a></li>
+                <li><a href="save-data.html" data-page="save-data">保存通讯数据</a></li>
+                <li><a href="simulation.html" data-page="simulation">仪表模拟</a></li>
+                <li><a href="scan.html" data-page="scan">扫描仪表通讯协议</a></li>
+                <li><a href="floating.html" data-page="floating">浮窗</a></li>
+                <li><a href="import-export.html" data-page="import-export">导入与导出数据</a></li>
+                <li><a href="plc-password.html" data-page="plc-password">查看 PLC 口令</a></li>
+                <li><a href="settings.html" data-page="settings">设置</a></li>
+                <li><a href="register.html" data-page="register">服务支持与注册升级</a></li>
+                <li><a href="faq.html" data-page="faq">常见问题释疑</a></li>
+                <li><a href="rs232-pinout.html" data-page="rs232-pinout">附录：RS232 端子定义与连线</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <div class="layout">
+            <section class="content">
+                <nav class="breadcrumb"><a href="../index.html">首页</a> <span class="separator">/</span> <span>浮窗</span></nav>
+
+                <h1 class="page-title">浮窗</h1>
+
+                <div class="topic-body">
+<p><font face="Times New Roman">
+<span style="FONT-SIZE: 11pt"><b> RS232 Tool</b> </span>
+<font style="FONT-SIZE: 11pt">特色功能之一“<font color="#000080"><b>浮窗</b></font>”，是专用于查看通讯数据字串的各字符位置与内容含义。</font></font><font style="FONT-SIZE: 11pt" face="Times New Roman"> 
+点击主界面菜单中的“浮窗”或在“设置”模块内勾选<span style="FONT-SIZE: 11pt">“<FONT face=宋体>□</FONT></span><font style="FONT-SIZE: 11pt" face="Times New Roman">浮窗-查看通讯字串”</font></font><font style="FONT-SIZE: 11pt" face="Times New Roman"><font face="Times New Roman"><font style="FONT-SIZE: 11pt">，</font></font></font><font style="FONT-SIZE: 11pt" face="Times New Roman">浮窗将被打开</font><font style="FONT-SIZE: 11pt" face="Times New Roman">并出现在桌面上，浮窗可拖动到桌面任意位置且不会被遮挡。</p><font style="FONT-SIZE: 11pt" face="Times New Roman">
+<p><font style="FONT-SIZE: 11pt" face="Times New Roman">浮窗窗口见下图所示，窗口表格第一行显示字符位置，第二行显示字符的十六进制数值，第三行显示字符</font><font style="FONT-SIZE: 11pt" face="Times New Roman">。对于ASCII码数值为0-1Fh的那些不能显示的特殊ASCII码字符（即控制字符），用其缩写代号来表示，如“回车”符——“CR”，其ASCII码数值为0Dh。</font></p>
+<p></font></FONT><font style="FONT-SIZE: 11pt" face="Times New Roman">浮窗表格宽度可做拉长或缩短来进行调整，以便于查看字符串数据；也可点击表格下边水平滚动条来移动表格内容进行查看。</font></P><span style="FONT-WEIGHT: 700">
+<font face="Times New Roman" style="FONT-SIZE: 11pt"><FONT size=2><FONT size=3>
+				<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ></FONT></FONT></font></span>   
+                  <font size="2">
+					<img border=0 alt="" src="../images/floating.gif" width=682 height=108  loading="lazy"></font></P>
+				<p 
+                 ><FONT size=3>
+				<font style="FONT-SIZE: 11pt" face="Times New Roman">
+				<span style="FONT-SIZE: 11pt">实例一：单击主界面接收区</span>，其中的通讯命令字串数据就会显示在浮窗上<font style="FONT-SIZE: 11pt" face="Times New Roman">。</font></p></FONT>
+				<P class="auto-style3" style="TEXT-ALIGN: left">   
+                  <font size="2">
+					<img border=0 alt="" src="../images/floating1.gif" width=682 height=489  loading="lazy"></font></P>
+				<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ></p>
+<p><font face="Times New Roman">
+<font style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 11pt"><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">
+				<span style="FONT-SIZE: 11pt">实例二：单击下图窗口表格通讯命令栏中的“ReadData”，其字串数据就会显示在浮窗上</span></span></span><font style="FONT-SIZE: 11pt" face="Times New Roman">。</font></p></FONT></FONT></FONT>
+				<P class="auto-style3" style="TEXT-ALIGN: left">   
+                  <font size="2">
+					<img border=0 alt="" src="../images/floating2.gif" width=682 height=436  loading="lazy"></font></P>
+                </div>
+
+                <nav class="page-nav">
+                    <a href="scan.html"><span class="nav-label">← 上一篇</span><span class="nav-title">扫描仪表通讯协议</span></a>
+                    <span class="nav-spacer"></span>
+                    <a href="import-export.html"><span class="nav-label">下一篇 →</span><span class="nav-title">导入与导出数据</span></a>
+                </nav>
+            </section>
+
+            <aside class="toc-sidebar">
+                <div class="toc-title">本页目录</div>
+                <ul></ul>
+            </aside>
+        </div>
+    </main>
+
+    <button class="mobile-menu-btn" aria-label="导航菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+    </button>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

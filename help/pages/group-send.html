@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>命令组的发送 - RS232 Tool 帮助文档</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="app-header">
+        <a class="brand" href="../index.html">
+            <img src="../images/IconPort32.png" alt="">
+            <span>RS232 Tool 帮助文档</span>
+            <small>· 9.0 版</small>
+        </a>
+        <div class="header-tools">
+            <input type="search" class="search-box" placeholder="搜索文档...">
+            <a class="header-link" href="../index.html">返回首页</a>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="nav-list">
+                <li><a href="../index.html" data-page="intro">软件简介</a></li>
+                <li><a href="interface.html" data-page="interface">软件界面</a></li>
+                <li><a href="setup.html" data-page="setup">运行与卸载</a></li>
+                <li><a href="command-table.html" data-page="command-table">通讯命令表操作</a></li>
+                <li><a href="group-send.html" data-page="group-send">命令组的发送</a></li>
+                <li><a href="font-color.html" data-page="font-color">接收区的字体字号和颜色</a></li>
+                <li><a href="end-mark.html" data-page="end-mark">结尾标志符的使用</a></li>
+                <li><a href="checksum.html" data-page="checksum">计算通讯命令校验码</a></li>
+                <li><a href="save-data.html" data-page="save-data">保存通讯数据</a></li>
+                <li><a href="simulation.html" data-page="simulation">仪表模拟</a></li>
+                <li><a href="scan.html" data-page="scan">扫描仪表通讯协议</a></li>
+                <li><a href="floating.html" data-page="floating">浮窗</a></li>
+                <li><a href="import-export.html" data-page="import-export">导入与导出数据</a></li>
+                <li><a href="plc-password.html" data-page="plc-password">查看 PLC 口令</a></li>
+                <li><a href="settings.html" data-page="settings">设置</a></li>
+                <li><a href="register.html" data-page="register">服务支持与注册升级</a></li>
+                <li><a href="faq.html" data-page="faq">常见问题释疑</a></li>
+                <li><a href="rs232-pinout.html" data-page="rs232-pinout">附录：RS232 端子定义与连线</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <div class="layout">
+            <section class="content">
+                <nav class="breadcrumb"><a href="../index.html">首页</a> <span class="separator">/</span> <span>命令组的发送</span></nav>
+
+                <h1 class="page-title">命令组的发送</h1>
+
+                <div class="topic-body">
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman">
+<span style="FONT-SIZE: 11pt"><b> RS232 Tool</b> 除了 </span>
+<font style="FONT-SIZE: 11pt">通常的一次发送一条通讯命令即单命令模式外，还能选择一次性发送一组通讯命令，即命令组模式。</font></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman">
+<font style="FONT-SIZE: 11pt"><br></font><font style="FONT-SIZE: 11pt">在没有<span style="FONT-SIZE: 11pt">勾选</span>主界面中的<span style="FONT-SIZE: 11pt">“<SPAN style="FONT-SIZE: 11pt"><FONT face=宋体>□</FONT></SPAN>命令组”选项</span>时，为单命令模式，点击<span style="FONT-SIZE: 11pt"  
+                    >【</span>发送<span style="FONT-SIZE: 11pt"  
+                    >】</span>是从指定串口发送出去一条发送区中的通讯命令字符串数据；<span style="FONT-SIZE: 11pt">勾选</span>该<span style="FONT-SIZE: 11pt">选项</span>后，切换为命令组模式，点击<span style="FONT-SIZE: 11pt"  
+                    >【</span>发送<span style="FONT-SIZE: 11pt"  
+                    >】</span>是从指定串口依次按周期间隔发送一组预设的各条通讯命令，而不是在发送区中的通讯命令。</font></font></p>
+<p><font style="FONT-SIZE: 11pt" face="Times New Roman"> 
+在勾选<span style="FONT-SIZE: 11pt"><font face="Times New Roman">“<SPAN style="FONT-SIZE: 11pt"><FONT face=宋体>□</FONT></SPAN>命令组”选项后点击【</font></span> 
+发送】之前，应预先设定好命令组的各条通讯命令，可通过点击工具栏上的“</font><span style="FONT-SIZE: 11pt" ><font face="Times New Roman">预设命令组发送数据</font></span><font style="FONT-SIZE: 11pt" face="Times New Roman"> ”图标进行操作，点击后将打开<span 
+style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">下图所示窗口。</span>
+</font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman"><STRONG>示例</STRONG> 
+：</font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman"> 
+勾选通讯命令“Hello”、“ReadData”、“TestData”，生成命令组，</font><font Times New Roman?; initial?? text-decoration-color: initial; text-decoration-style: text-decoration-thickness: 0px; -webkit-text-stroke-width: normal; font-variant-caps: font-variant-ligatures: TEXT-INDENT: LETTER-SPACING: 2; WIDOWS: ORPHANS: FONT-STYLE: rgb(0,0,0); COLOR: 400; FONT-WEIGHT: none; TEXT-TRANSFORM: WORD-SPACING: WHITE-SPACE: >返回后点击</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial" 
+                    >【</span><span Times New Roman?; initial?? text-decoration-color: initial; text-decoration-style: text-decoration-thickness: 0px; -webkit-text-stroke-width: normal; font-variant-caps: font-variant-ligatures: TEXT-INDENT: LETTER-SPACING: 2; WIDOWS: ORPHANS: FONT-STYLE: rgb(0,0,0); COLOR: FONT-WEIGHT: none; TEXT-TRANSFORM: WORD-SPACING: WHITE-SPACE: 700;            
+                    >发送</span><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial" 
+                    >】</span><font style="FONT-SIZE: 11pt" face="Times New Roman"> ，将按“周期”间隔时间从串口逐一分别发送出去该 3 
+条命令。</font></p> 
+<p><font style="FONT-SIZE: 11pt" face="Times New Roman">窗口中表格的<strong><span class="auto-style2">每一行记录，</span></strong> 
+包括一条通讯命令字符串数据及其说明，可以直接进行修改、输入或粘贴等操作，在表格中点击鼠标右键可弹出快捷菜单操作。</font></p>
+<p><font style="FONT-SIZE: 11pt" face="Times New Roman"> 在窗口上部的十六进制编辑区中，固定以十六进制显示表中当前行的通讯命令字串内容，可直接对编辑区中的该条命令进行编辑、修改。对于那些不能在表格中显示与输入的特殊ASCII码字符，即可在此编辑处理。输入或修改内容后，可按回车健结束。</font></p>
+				<p><font style="FONT-SIZE: 11pt" face="Times New Roman"> 十六进制编辑区上方的<span class="auto-style4"><strong><font color="#000080">数字标尺</font></strong></span>，便于准确定位编辑区中通讯命令字符串各字符的位置。</font></p>
+<p><span style="FONT-WEIGHT: 700">
+<font face="Times New Roman" style="FONT-SIZE: 11pt">发送命令组</font></span><font style="FONT-SIZE: 11pt" face="Times New Roman"><b>的一般步骤</b></font></p>         
+<p style                           ="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"               
+                    initial?? text-decoration-color: initial; text-decoration-style: text-decoration-thickness: 0px; -webkit-text-stroke-width: normal; font-variant-caps: font-variant-ligatures: TEXT-INDENT: LETTER-SPACING: 2; WIDOWS: ORPHANS: FONT-STYLE: rgb(0,0,0); COLOR: 400; FONT-WEIGHT: none; TEXT-TRANSFORM: WORD-SPACING: WHITE-SPACE: MARGIN-TOP: YaHei?; Microsoft>
+<font face="Times New Roman">
+<span style="FONT-SIZE: 11pt">&nbsp;&nbsp; </span><font style="FONT-SIZE: 11pt">&nbsp;1.&nbsp;点击工具栏上“预设命令组发送数据”图标，选择所需通讯命令<font style="FONT-SIZE: 11pt">（最多勾选8条），若无所需则先编辑命令再做选择，命令也可以从通讯命令表中选取，之后返回主界面</font><span style="FONT-SIZE: 11pt">；</span></font></font></p>
+<p style                           ="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"               
+                    initial?? text-decoration-color: initial; text-decoration-style: text-decoration-thickness: 0px; -webkit-text-stroke-width: normal; font-variant-caps: font-variant-ligatures: TEXT-INDENT: LETTER-SPACING: 2; WIDOWS: ORPHANS: FONT-STYLE: rgb(0,0,0); COLOR: 400; FONT-WEIGHT: none; TEXT-TRANSFORM: WORD-SPACING: WHITE-SPACE: MARGIN-TOP: YaHei?; Microsoft>
+<span style="FONT-SIZE: 11pt"><font face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+2.&nbsp;选择相应串口并设定其通讯协议；</font></span></p>
+<p style                           ="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"               
+                    initial?? text-decoration-color: initial; text-decoration-style: text-decoration-thickness: 0px; -webkit-text-stroke-width: normal; font-variant-caps: font-variant-ligatures: TEXT-INDENT: LETTER-SPACING: 2; WIDOWS: ORPHANS: FONT-STYLE: rgb(0,0,0); COLOR: 400; FONT-WEIGHT: none; TEXT-TRANSFORM: WORD-SPACING: WHITE-SPACE: MARGIN-TOP: YaHei?; Microsoft>
+<span style="FONT-SIZE: 11pt"><font face="Times New Roman">&nbsp;&nbsp;&nbsp; 3.&nbsp;勾选“<SPAN style="FONT-SIZE: 11pt"><FONT face=宋体>□</FONT></SPAN> 命令组”选项；</font></span></p>
+<p style                           ="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"               
+                    initial?? text-decoration-color: initial; text-decoration-style: text-decoration-thickness: 0px; -webkit-text-stroke-width: normal; font-variant-caps: font-variant-ligatures: TEXT-INDENT: LETTER-SPACING: 2; WIDOWS: ORPHANS: FONT-STYLE: rgb(0,0,0); COLOR: 400; FONT-WEIGHT: none; TEXT-TRANSFORM: WORD-SPACING: WHITE-SPACE: MARGIN-TOP: YaHei?; Microsoft>
+<span style="FONT-SIZE: 11pt"><font face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+4.&nbsp;将“周期”设置为适当的时间间隔或保持不变；</font></span></p>
+<p style                           ="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"               
+                    initial?? text-decoration-color: initial; text-decoration-style: text-decoration-thickness: 0px; -webkit-text-stroke-width: normal; font-variant-caps: font-variant-ligatures: TEXT-INDENT: LETTER-SPACING: 2; WIDOWS: ORPHANS: FONT-STYLE: rgb(0,0,0); COLOR: 400; FONT-WEIGHT: none; TEXT-TRANSFORM: WORD-SPACING: WHITE-SPACE: MARGIN-TOP: YaHei?; Microsoft>
+<span style="FONT-SIZE: 11pt"><font face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+5.&nbsp;点击【打开串口】；</font></span></p>
+<p style                           ="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"               
+                    initial?? text-decoration-color: initial; text-decoration-style: text-decoration-thickness: 0px; -webkit-text-stroke-width: normal; font-variant-caps: font-variant-ligatures: TEXT-INDENT: LETTER-SPACING: 2; WIDOWS: ORPHANS: FONT-STYLE: rgb(0,0,0); COLOR: 400; FONT-WEIGHT: none; TEXT-TRANSFORM: WORD-SPACING: WHITE-SPACE: MARGIN-TOP: YaHei?; Microsoft>
+<span style="FONT-SIZE: 11pt"><font face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+6.&nbsp;点击【发送】，即从串口一次性发送出去所选命令组的各条命令。</font></span></p>
+<p initial?? text-decoration-color: initial; text-decoration-style: text-decoration-thickness: 0px; -webkit-text-stroke-width: normal; font-variant-caps: font-variant-ligatures: TEXT-INDENT: LETTER-SPACING: 2; WIDOWS: ORPHANS: FONT-STYLE: rgb(0,0,0); COLOR: 400; FONT-WEIGHT: none; TEXT-TRANSFORM: WORD-SPACING: WHITE-SPACE: MARGIN-TOP: YaHei?; Microsoft               
+                    >   
+                  <font size="2">
+					<img border=0 src="../images/Multiplesend.gif" width=682 height=436  loading="lazy"></font></p>
+                </div>
+
+                <nav class="page-nav">
+                    <a href="command-table.html"><span class="nav-label">← 上一篇</span><span class="nav-title">通讯命令表操作</span></a>
+                    <span class="nav-spacer"></span>
+                    <a href="font-color.html"><span class="nav-label">下一篇 →</span><span class="nav-title">接收区的字体字号和颜色</span></a>
+                </nav>
+            </section>
+
+            <aside class="toc-sidebar">
+                <div class="toc-title">本页目录</div>
+                <ul></ul>
+            </aside>
+        </div>
+    </main>
+
+    <button class="mobile-menu-btn" aria-label="导航菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+    </button>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

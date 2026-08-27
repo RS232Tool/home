@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通讯命令表操作 - RS232 Tool 帮助文档</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="app-header">
+        <a class="brand" href="../index.html">
+            <img src="../images/IconPort32.png" alt="">
+            <span>RS232 Tool 帮助文档</span>
+            <small>· 9.0 版</small>
+        </a>
+        <div class="header-tools">
+            <input type="search" class="search-box" placeholder="搜索文档...">
+            <a class="header-link" href="../index.html">返回首页</a>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="nav-list">
+                <li><a href="../index.html" data-page="intro">软件简介</a></li>
+                <li><a href="interface.html" data-page="interface">软件界面</a></li>
+                <li><a href="setup.html" data-page="setup">运行与卸载</a></li>
+                <li><a href="command-table.html" data-page="command-table">通讯命令表操作</a></li>
+                <li><a href="group-send.html" data-page="group-send">命令组的发送</a></li>
+                <li><a href="font-color.html" data-page="font-color">接收区的字体字号和颜色</a></li>
+                <li><a href="end-mark.html" data-page="end-mark">结尾标志符的使用</a></li>
+                <li><a href="checksum.html" data-page="checksum">计算通讯命令校验码</a></li>
+                <li><a href="save-data.html" data-page="save-data">保存通讯数据</a></li>
+                <li><a href="simulation.html" data-page="simulation">仪表模拟</a></li>
+                <li><a href="scan.html" data-page="scan">扫描仪表通讯协议</a></li>
+                <li><a href="floating.html" data-page="floating">浮窗</a></li>
+                <li><a href="import-export.html" data-page="import-export">导入与导出数据</a></li>
+                <li><a href="plc-password.html" data-page="plc-password">查看 PLC 口令</a></li>
+                <li><a href="settings.html" data-page="settings">设置</a></li>
+                <li><a href="register.html" data-page="register">服务支持与注册升级</a></li>
+                <li><a href="faq.html" data-page="faq">常见问题释疑</a></li>
+                <li><a href="rs232-pinout.html" data-page="rs232-pinout">附录：RS232 端子定义与连线</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <div class="layout">
+            <section class="content">
+                <nav class="breadcrumb"><a href="../index.html">首页</a> <span class="separator">/</span> <span>通讯命令表操作</span></nav>
+
+                <h1 class="page-title">通讯命令表操作</h1>
+
+                <div class="topic-body">
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman"><font style="FONT-SIZE: 11pt"> 
+在主界面</font><font style="FONT-SIZE: 11pt">中点击<span style="FONT-SIZE: 11pt" >【通讯命令表】</span><font style="FONT-SIZE: 11pt">，将弹出下面的“</font><span style="FONT-SIZE: 11pt"  
+                 >通讯命令表</span><font style="FONT-SIZE: 11pt">
+”窗口。</font></font></font></p>
+<p><font face="Times New Roman"><font style="FONT-SIZE: 11pt"> 有了</font><span style="FONT-SIZE: 11pt"><b> RS232 Tool</b> </span>
+<font style="FONT-SIZE: 11pt">提供的通讯命令表记录，将极大方便使用串口对</font><span style="FONT-SIZE: 11pt">智能仪表或 PLC</span><font style="FONT-SIZE: 11pt"> 
+进行通讯检测、程序调试等工作。用户可先在通讯命令表中添加、编辑、测试好所需的各种通讯命令、通讯协议，以后就可以直接及重复使用了，日积月累，指令表中的通讯命令越来越多，调试、检测及维护等工作也将变得越来越轻松。</font></font></p>
+<p><font style="FONT-SIZE: 11pt" face="Times New Roman"> 如果需要使用新版本或重新安装等，</font><font style="FONT-SIZE: 11pt" face="Times New Roman">用户的通讯命令表还可通过文件<FONT size=3>菜单中的</FONT>“导入与导出数据”功能，进行保存、恢复、拷贝、分享等。</font></p>
+<p><font face="Times New Roman">
+<font style="FONT-SIZE: 11pt">窗口中表格的<span class="auto-style2"><strong>每一行记录，</strong></span>显示已保存的一条通讯命令、说明及其相应的通讯协议，可以直接进行修改、输入或粘贴等操作，在表格中点击鼠标右键可弹出快捷菜单操作。</font></font></p>
+<p><font style="FONT-SIZE: 11pt" face="Times New Roman"> 在窗口上部的十六进制编辑区中，固定以十六进制显示表中当前行的通讯命令字符串内容，可直接对编辑区中的该条命令进行编辑、修改。对于那些不能在表格中显示与输入的特殊ASCII码字符，即可在此编辑处理。输入或修改内容后，可按回车健结束。</font></p>
+				<p><font style="FONT-SIZE: 11pt" face="Times New Roman"> 十六进制编辑区上方的<span class="auto-style4"><strong><font color="#000080">数字标尺</font></strong></span>，便于准确定位编辑区中通讯命令字符串各字符的位置。</font></p>
+<p><font face="Times New Roman"><span style="FONT-SIZE: 11pt; FONT-WEIGHT: 700" 
+                 >通讯命令</span><span style="FONT-SIZE: 11pt"><b>表</b></span><font style="FONT-SIZE: 11pt"><b>操作的一般步骤</b></font></font></p>         
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman"><font style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 
+1. 在表格中选择一条相应的通讯命令，若没有所需则</font><span style="FONT-SIZE: 11pt">应先</span><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span><font style="FONT-SIZE: 11pt" >增加</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt">或</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span><font style="FONT-SIZE: 11pt" >插入</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt">新的通讯命令；</font></font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+2. 若与所需命令不同，则可对其进行修改；</font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman"><font style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 3. 点击</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span><span style="FONT-SIZE: 11pt" 
+                 >设为发送区命令</span><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt">，将主界面发送区中内容替换为所选择的通讯命令；</font></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman"><font style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 4. 点击</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span><span style="FONT-SIZE: 11pt" 
+                 >设为串口协议</span><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt">，将主界面中的串口当前通讯协议替换为所选择命令的通讯协议；</font></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman"><font style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 
+  5. 操作完毕返回主界面。也可以点击</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span><span style="FONT-SIZE: 11pt" 
+                 >发送</span><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt">，直接就发送出去所选命令进行通讯测试。</font></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >&nbsp;</p>
+				<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >   
+                  <font size="2">
+					<img  border=0 src="../images/History.gif" width=817 height=488  loading="lazy"></font></p>
+                </div>
+
+                <nav class="page-nav">
+                    <a href="setup.html"><span class="nav-label">← 上一篇</span><span class="nav-title">运行与卸载</span></a>
+                    <span class="nav-spacer"></span>
+                    <a href="group-send.html"><span class="nav-label">下一篇 →</span><span class="nav-title">命令组的发送</span></a>
+                </nav>
+            </section>
+
+            <aside class="toc-sidebar">
+                <div class="toc-title">本页目录</div>
+                <ul></ul>
+            </aside>
+        </div>
+    </main>
+
+    <button class="mobile-menu-btn" aria-label="导航菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+    </button>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

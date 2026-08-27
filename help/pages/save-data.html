@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保存通讯数据 - RS232 Tool 帮助文档</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="app-header">
+        <a class="brand" href="../index.html">
+            <img src="../images/IconPort32.png" alt="">
+            <span>RS232 Tool 帮助文档</span>
+            <small>· 9.0 版</small>
+        </a>
+        <div class="header-tools">
+            <input type="search" class="search-box" placeholder="搜索文档...">
+            <a class="header-link" href="../index.html">返回首页</a>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="nav-list">
+                <li><a href="../index.html" data-page="intro">软件简介</a></li>
+                <li><a href="interface.html" data-page="interface">软件界面</a></li>
+                <li><a href="setup.html" data-page="setup">运行与卸载</a></li>
+                <li><a href="command-table.html" data-page="command-table">通讯命令表操作</a></li>
+                <li><a href="group-send.html" data-page="group-send">命令组的发送</a></li>
+                <li><a href="font-color.html" data-page="font-color">接收区的字体字号和颜色</a></li>
+                <li><a href="end-mark.html" data-page="end-mark">结尾标志符的使用</a></li>
+                <li><a href="checksum.html" data-page="checksum">计算通讯命令校验码</a></li>
+                <li><a href="save-data.html" data-page="save-data">保存通讯数据</a></li>
+                <li><a href="simulation.html" data-page="simulation">仪表模拟</a></li>
+                <li><a href="scan.html" data-page="scan">扫描仪表通讯协议</a></li>
+                <li><a href="floating.html" data-page="floating">浮窗</a></li>
+                <li><a href="import-export.html" data-page="import-export">导入与导出数据</a></li>
+                <li><a href="plc-password.html" data-page="plc-password">查看 PLC 口令</a></li>
+                <li><a href="settings.html" data-page="settings">设置</a></li>
+                <li><a href="register.html" data-page="register">服务支持与注册升级</a></li>
+                <li><a href="faq.html" data-page="faq">常见问题释疑</a></li>
+                <li><a href="rs232-pinout.html" data-page="rs232-pinout">附录：RS232 端子定义与连线</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <div class="layout">
+            <section class="content">
+                <nav class="breadcrumb"><a href="../index.html">首页</a> <span class="separator">/</span> <span>保存通讯数据</span></nav>
+
+                <h1 class="page-title">保存通讯数据</h1>
+
+                <div class="topic-body">
+<font style="FONT-SIZE: 11pt" face="Times New Roman"> <span style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+
+<p><font style="FONT-SIZE: 11pt" face="Times New Roman"> <span style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">用户在进行串口测试中得到的<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">通讯数据</span>，会先在内存暂存而不会自行保存到文件。若需保存为历史记录，</span></font>可使用</span><span style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">“保存通讯数据”模块功能。点击主界面菜单中或工具栏上的“保存通讯数据”图标，将打开如下图所示<span 
+style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">窗口。</span></span></font></P>
+<p><font face="Times New Roman">
+<font style="FONT-SIZE: 11pt">窗口各按钮的功能作用：</font></font></p>
+<font style="FONT-SIZE: 11pt" face="Times New Roman"><font face="Times New Roman">
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font size="3" face="Times New Roman"><span style="FONT-FAMILY: 仿宋_GB2312">&nbsp;&nbsp;&nbsp;<font style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312"> 【取消<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span>——不保存<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">通讯数据，返回主界面</span>。</font></span></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font size="3" face="Times New Roman"><span style="FONT-FAMILY: 仿宋_GB2312">&nbsp;&nbsp;&nbsp;<font style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312"> 【确定<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span>——保存<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">通讯数据，返回主界面</span>。</font></span></font></font></P>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font size="3" face="Times New Roman"><span style="FONT-FAMILY: 仿宋_GB2312">&nbsp;&nbsp;&nbsp; <span 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span><font style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">重置数据</font><span 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">——将数据组号清0、循环标志置“无”，释放内存暂存数据，返回主界面<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">。</span></font></span></font></p>
+<p>其中一次可保存的数据组数可在“设置”模块中进行设置或修改，数据组号表示已经有多少组通讯数据，循环标志内容“是”时表示已经有超过50组的暂存通讯数据而开始循环存放数据了，开始、结束时间表示最先一组通讯数据的时间和最后一组通讯数据的时间。</p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"></font>
+				<font style="FONT-SIZE: 11pt" face="Times New Roman"><font face="Times New Roman">
+<font style="FONT-SIZE: 11pt"></font></font></font><font size="2">
+					<img  border=0 alt="" src="../images/Save.gif"  loading="lazy"></font></P>
+                </div>
+
+                <nav class="page-nav">
+                    <a href="checksum.html"><span class="nav-label">← 上一篇</span><span class="nav-title">计算通讯命令校验码</span></a>
+                    <span class="nav-spacer"></span>
+                    <a href="simulation.html"><span class="nav-label">下一篇 →</span><span class="nav-title">仪表模拟</span></a>
+                </nav>
+            </section>
+
+            <aside class="toc-sidebar">
+                <div class="toc-title">本页目录</div>
+                <ul></ul>
+            </aside>
+        </div>
+    </main>
+
+    <button class="mobile-menu-btn" aria-label="导航菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+    </button>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

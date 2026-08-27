@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>软件界面 - RS232 Tool 帮助文档</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="app-header">
+        <a class="brand" href="../index.html">
+            <img src="../images/IconPort32.png" alt="">
+            <span>RS232 Tool 帮助文档</span>
+            <small>· 9.0 版</small>
+        </a>
+        <div class="header-tools">
+            <input type="search" class="search-box" placeholder="搜索文档...">
+            <a class="header-link" href="../index.html">返回首页</a>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="nav-list">
+                <li><a href="../index.html" data-page="intro">软件简介</a></li>
+                <li><a href="interface.html" data-page="interface">软件界面</a></li>
+                <li><a href="setup.html" data-page="setup">运行与卸载</a></li>
+                <li><a href="command-table.html" data-page="command-table">通讯命令表操作</a></li>
+                <li><a href="group-send.html" data-page="group-send">命令组的发送</a></li>
+                <li><a href="font-color.html" data-page="font-color">接收区的字体字号和颜色</a></li>
+                <li><a href="end-mark.html" data-page="end-mark">结尾标志符的使用</a></li>
+                <li><a href="checksum.html" data-page="checksum">计算通讯命令校验码</a></li>
+                <li><a href="save-data.html" data-page="save-data">保存通讯数据</a></li>
+                <li><a href="simulation.html" data-page="simulation">仪表模拟</a></li>
+                <li><a href="scan.html" data-page="scan">扫描仪表通讯协议</a></li>
+                <li><a href="floating.html" data-page="floating">浮窗</a></li>
+                <li><a href="import-export.html" data-page="import-export">导入与导出数据</a></li>
+                <li><a href="plc-password.html" data-page="plc-password">查看 PLC 口令</a></li>
+                <li><a href="settings.html" data-page="settings">设置</a></li>
+                <li><a href="register.html" data-page="register">服务支持与注册升级</a></li>
+                <li><a href="faq.html" data-page="faq">常见问题释疑</a></li>
+                <li><a href="rs232-pinout.html" data-page="rs232-pinout">附录：RS232 端子定义与连线</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <div class="layout">
+            <section class="content">
+                <nav class="breadcrumb"><a href="../index.html">首页</a> <span class="separator">/</span> <span>软件界面</span></nav>
+
+                <h1 class="page-title">软件界面</h1>
+
+                <div class="topic-body">
+<p><font face="Times New Roman" style="FONT-SIZE: 11pt">  运行进入 </font> <font face="Times New Roman"><span style="FONT-SIZE: 11pt"><b>RS232 Tool</b></span><font style="FONT-SIZE: 11pt">，软件主界面如下图所示。</font></font><font style="FONT-SIZE: 11pt"></font></p>
+
+<p><font style="FONT-SIZE: 11pt">
+<img border=0 alt="" src="../images/Page2.gif" width=682 height=499  loading="lazy"></font></p>
+<p align=left><font face="Times New Roman"><font style="FONT-SIZE: 11pt"><b></b></font></font>&nbsp;</p>
+<p align=left><font face="Times New Roman"><font style="FONT-SIZE: 11pt"><b>软件界面接收区功能</b></font></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><font face="Times New Roman">
+<span style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 【<font style="FONT-SIZE: 11pt">打开串口/关闭串口</font>】<font style="FONT-SIZE: 11pt">——打开或关闭指定串口的通讯功能，接收或发送数据前均应先打开。</font></span></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><font face="Times New Roman">
+<span style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 【<font style="FONT-SIZE: 11pt">字体和颜色</font>】<font style="FONT-SIZE: 11pt" >——选择、设置接收区的字体字号和颜色</font><font style="FONT-SIZE: 11pt">，在其弹窗中进行设定，显示颜色最多可选择5种。</font></span></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><font face="Times New Roman">
+<span style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp;<font style="FONT-SIZE: 11pt"> 
+【切换颜色<span style="FONT-SIZE: 11pt" >】</span>——改变接收区当前字体颜色到下一个，右边小方块是当前所选颜色，新接收字串将以此颜色显示。</font></span></font></p>   
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><span style="FONT-SIZE: 11pt"><font face="Times New Roman">&nbsp;&nbsp;&nbsp; 【<font style="FONT-SIZE: 11pt">结尾标志符</font>】<font style="FONT-SIZE: 11pt">——选择接收数据的结束标志字符或做编辑，可在其弹窗中对结尾标志符进行选择、修改、增加或删除。</font></font></span><font style="FONT-SIZE: 11pt" face="Times New Roman">一般在智能仪表的通讯命令格式中，均用一个固定的标志字符串，如“回车符＋换行符”等作为其一次通讯的结束标志，这个标志字符串称为“结尾标志符”。<span style="FONT-SIZE: 11pt">RS232 Tool 
+可用此标志符作为接收数据的自动换行标记。</span></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >&nbsp;</p>
+<span style="FONT-SIZE: 11pt"><font face="Times New Roman">
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font style="FONT-SIZE: 11pt" face="Times New Roman">
+<span style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; “</span></font><font face="宋体"><span style="FONT-SIZE: 11pt">□</span></font><font style="FONT-SIZE: 11pt" face="Times New Roman">十六进制显示”——勾选时接收区中字串以十六进制显示，取消时以ASCII码显示。十六进制显示时，每一个字符是用2个十六进制数表示，用1个空格分隔。例如：ASCII码字符“abcd”，十六进制显示时是“61 62 63     
+64 ”。</font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >&nbsp;&nbsp;&nbsp; “</font></span><font face="宋体"><span style="FONT-SIZE: 11pt">□</span></font><span style="FONT-SIZE: 11pt"><font face="Times New Roman">按<font style="FONT-SIZE: 11pt">标志符换行”——勾选时接收区数据将按选定的结尾标志符进行换行，否则自动换行。</font></font></span></P>  
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font style="FONT-SIZE: 11pt" face="Times New Roman">
+<span style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; “</span></font><font face="宋体"><span style="FONT-SIZE: 11pt">□</span></font><font style="FONT-SIZE: 11pt" face="Times New Roman"><span style="FONT-SIZE: 11pt"><font style="FONT-SIZE: 11pt">自动清空”——勾选时接收区显示内容满时将会被自动清空。</font></span></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><span style="FONT-SIZE: 11pt">
+<font face="Times New Roman">&nbsp;&nbsp;&nbsp; “</font></span><font face="宋体"><span style="FONT-SIZE: 11pt">□</span></font><span style="FONT-SIZE: 11pt"><font style="FONT-SIZE: 11pt" face="Times New Roman">自动换色”——勾选时接收区数据换行时将自动切换字体颜色，每行用不同颜色显示。</font></span></p><font face="Times New Roman">
+<span style="FONT-SIZE: 11pt">
+<p><font style="FONT-SIZE: 11pt" face="Times New Roman"><STRONG>软件界面发送区功能</STRONG></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&nbsp;&nbsp;&nbsp; 【发送】<font style="FONT-SIZE: 11pt">——从指定串口发送一次发送区内容或所选命令组数据</font><font style="FONT-SIZE: 11pt">。</font>
+</span></font></P><font face="Times New Roman">
+<span style="FONT-SIZE: 11pt">
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&nbsp;&nbsp;&nbsp; 【<span style="FONT-SIZE: 11pt"  
+                 >通讯命令表</span>】<font style="FONT-SIZE: 11pt">——从命令表中选择所需的通讯命令或做编辑</font><font style="FONT-SIZE: 11pt">，可在其弹窗中选择、发送、修改或删除等用户之前保存的各条通讯命令记录，以及插入、增加新的通讯命令。</font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&nbsp;<font style="FONT-SIZE: 11pt">&nbsp;&nbsp; 【<span style="FONT-SIZE: 11pt"  
+                 >计算校验码</span>】<font style="FONT-SIZE: 11pt">——计算需要发送的字符串中的校验码，在其弹窗中操作。</font></font></span></font></P>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&nbsp;</p>
+<font style="FONT-SIZE: 11pt" face="Times New Roman">
+<span style="FONT-SIZE: 11pt">
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font style="FONT-SIZE: 11pt" face="Times New Roman">
+<span style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; “</span></font><font face="宋体"><span style="FONT-SIZE: 11pt">□</span></font><font style="FONT-SIZE: 11pt" face="Times New Roman">十六进制显示”——勾选时发送区中字串以十六进制显示，取消时以ASCII码显示。十六进制显示时，每一个字符是用2个十六进制数表示，用1个空格分隔。例如：ASCII码字符“abcd”，十六进制显示时是“61 62 63     
+64 ”。</font></p>     
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">&nbsp;&nbsp;&nbsp; “</span></font><font face="宋体"><span style="FONT-SIZE: 11pt">□</span></font><font style="FONT-SIZE: 11pt" face="Times New Roman">自动发送”——勾选时自动按指定周期间隔时间持续发送命令组或发送区内容，不需再去点击发送按钮。</font></P>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman">
+<span style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; “</span></font><font face="宋体"><span style="FONT-SIZE: 11pt">□</span></font><font style="FONT-SIZE: 11pt" face="Times New Roman"><font style="FONT-SIZE: 11pt">  
+命令组”——勾选时依次按周期间隔发送一组预设的各条通讯命令，不勾选时为发送单条命令模式，需点击发送按钮去执行发送</font><span style="FONT-SIZE: 11pt">。</span></font></p>        
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" align="left" 
+                 >　</p>
+				<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+				<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+				发送区框上方的“<span class="auto-style3"><font color="#000099"><STRONG>数字标尺</STRONG><FONT color=#000000>”</FONT></font></span>，便于准确定位发送区中通讯命令字符串各字符的位置。</font></p>
+<p><font style="FONT-SIZE: 11pt" face="Times New Roman"><b>串口通讯测试的一般步骤</b></font></p>         
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+1. 将智能仪表或 PLC 的通讯口与电脑串口（<span style="FONT-SIZE: 11pt">RS232/RS485/RS422</span>）用通讯电缆相连接；</font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 2. 选择对应串口，如“COM1”；</font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 3. 设定串口的通讯协议，包括波特率、数据位、停止位及校验方式，通讯双方要完全一致；</font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 >
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+4. 设置通讯命令，输入或通过通讯命令表选择所需通讯命令；</font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman"><font style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 
+5. 点击</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span><font style="FONT-SIZE: 11pt">打开串口</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt">，</font></font><span style="FONT-SIZE: 11pt"><font face="Times New Roman">接收或发送数据前均应先打开</font></span><font style="FONT-SIZE: 11pt" face="Times New Roman">
+；</font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" 
+                 ><font face="Times New Roman"><font style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 
+6. 点击</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span><span style="FONT-SIZE: 11pt"  
+                 >发送</span><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt">，从串口发送出去一次发送区中的通讯命令字符串数据。</font></font></p>
+                </div>
+
+                <nav class="page-nav">
+                    <a href="../index.html"><span class="nav-label">← 上一篇</span><span class="nav-title">软件简介</span></a>
+                    <span class="nav-spacer"></span>
+                    <a href="setup.html"><span class="nav-label">下一篇 →</span><span class="nav-title">运行与卸载</span></a>
+                </nav>
+            </section>
+
+            <aside class="toc-sidebar">
+                <div class="toc-title">本页目录</div>
+                <ul></ul>
+            </aside>
+        </div>
+    </main>
+
+    <button class="mobile-menu-btn" aria-label="导航菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+    </button>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

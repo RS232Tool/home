@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导入与导出数据 - RS232 Tool 帮助文档</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="app-header">
+        <a class="brand" href="../index.html">
+            <img src="../images/IconPort32.png" alt="">
+            <span>RS232 Tool 帮助文档</span>
+            <small>· 9.0 版</small>
+        </a>
+        <div class="header-tools">
+            <input type="search" class="search-box" placeholder="搜索文档...">
+            <a class="header-link" href="../index.html">返回首页</a>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="nav-list">
+                <li><a href="../index.html" data-page="intro">软件简介</a></li>
+                <li><a href="interface.html" data-page="interface">软件界面</a></li>
+                <li><a href="setup.html" data-page="setup">运行与卸载</a></li>
+                <li><a href="command-table.html" data-page="command-table">通讯命令表操作</a></li>
+                <li><a href="group-send.html" data-page="group-send">命令组的发送</a></li>
+                <li><a href="font-color.html" data-page="font-color">接收区的字体字号和颜色</a></li>
+                <li><a href="end-mark.html" data-page="end-mark">结尾标志符的使用</a></li>
+                <li><a href="checksum.html" data-page="checksum">计算通讯命令校验码</a></li>
+                <li><a href="save-data.html" data-page="save-data">保存通讯数据</a></li>
+                <li><a href="simulation.html" data-page="simulation">仪表模拟</a></li>
+                <li><a href="scan.html" data-page="scan">扫描仪表通讯协议</a></li>
+                <li><a href="floating.html" data-page="floating">浮窗</a></li>
+                <li><a href="import-export.html" data-page="import-export">导入与导出数据</a></li>
+                <li><a href="plc-password.html" data-page="plc-password">查看 PLC 口令</a></li>
+                <li><a href="settings.html" data-page="settings">设置</a></li>
+                <li><a href="register.html" data-page="register">服务支持与注册升级</a></li>
+                <li><a href="faq.html" data-page="faq">常见问题释疑</a></li>
+                <li><a href="rs232-pinout.html" data-page="rs232-pinout">附录：RS232 端子定义与连线</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <div class="layout">
+            <section class="content">
+                <nav class="breadcrumb"><a href="../index.html">首页</a> <span class="separator">/</span> <span>导入与导出数据</span></nav>
+
+                <h1 class="page-title">导入与导出数据</h1>
+
+                <div class="topic-body">
+<p><font face="Times New Roman"><font style="FONT-SIZE: 11pt"> 
+点击主界面文件</font>菜单下的“<font style="FONT-SIZE: 11pt">导入与导出数据 ”，将</font><font style="FONT-SIZE: 11pt">弹出下图所示窗口。</font></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><font face="Times New Roman"><span style="FONT-SIZE: 11pt"><b> RS232 Tool</b> </span>
+<font style="FONT-SIZE: 11pt">配置有通讯命令表、命令组、仪表模拟通讯、串口通讯记录等数据库，均可用此功能进行导入与导出操作。</font></font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+</font></p>
+				<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+				<font face="Times New Roman">
+				<font style="FONT-SIZE: 11pt">为在以后需重新安装系统、升级或在别的机上用时，仍继续使用原来记录了大量通讯命令的通讯命令表等数据记录，可使用导出功能对其作一备份。重新装入时，就可以使用导入功能将原来备份的数据取回，不必再逐个重新输入。</font></font></p>
+<p><font face="Times New Roman"><span style="FONT-SIZE: 11pt; FONT-WEIGHT: 700">导入或导出数据</span><font style="FONT-SIZE: 11pt"><b>的一般步骤</b></font></font></p>         
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 
+1. 选择导入数据的方式，是替换或者添加；</font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><font face="Times New Roman"><font style="FONT-SIZE: 11pt">&nbsp;&nbsp;&nbsp; 
+2. 点击</font><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span></font><font style="FONT-SIZE: 11pt" face="Times New Roman">选择文件夹</font><font face="Times New Roman"><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span><font style="FONT-SIZE: 11pt">，选择数据文件所在的文件夹；</font></font></p> 
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 3. 点击执行<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span>导出<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span>或<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span>导入<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span>  ；</font></p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+<font style="FONT-SIZE: 11pt" face="Times New Roman">&nbsp;&nbsp;&nbsp; 4. 点击<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312"><span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">【</span></span>返回<span style="FONT-SIZE: 11pt; FONT-FAMILY: 仿宋_GB2312">】</span> 
+ 主界面。</font></p>
+     
+<p><font style="FONT-SIZE: 11pt" face="Times New Roman"> 
+其中通讯命令表对应的数据文件名为：history.dbf，虽也可直接拷贝但不建议。</font></p>
+     
+<p><font size="2">
+			    <img border=0 src="../images/Import.gif" width=580 height=353 loading="lazy"></font></p>
+                </div>
+
+                <nav class="page-nav">
+                    <a href="floating.html"><span class="nav-label">← 上一篇</span><span class="nav-title">浮窗</span></a>
+                    <span class="nav-spacer"></span>
+                    <a href="plc-password.html"><span class="nav-label">下一篇 →</span><span class="nav-title">查看 PLC 口令</span></a>
+                </nav>
+            </section>
+
+            <aside class="toc-sidebar">
+                <div class="toc-title">本页目录</div>
+                <ul></ul>
+            </aside>
+        </div>
+    </main>
+
+    <button class="mobile-menu-btn" aria-label="导航菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+    </button>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
